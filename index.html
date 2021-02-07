@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=g, initial-scale=1.0" />
+    <title>Hover Effect</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main>
+      <!--Left group-->
+      <section class="group">
+        <div
+          class="pictogram-background"
+          id="left-background"
+          onmouseover="changeColors('left-background');
+        changeImage('left-pictogram', 'tablet-1538')"
+          onmouseout="restoreColors('left-background');
+        changeImage('left-pictogram', 'tablet-norm')"
+        >
+          <div class="tablet-norm" id="left-pictogram"></div>
+        </div>
+        <h2 class="group-title">Responsive Design</h2>
+        <p class="group-description">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi enim
+          ex iusto perferendis?
+        </p>
+      </section>
+      <!--Center group-->
+      <section class="group">
+        <div
+          class="pictogram-background"
+          id="center-background"
+          onmouseover="changeColors('center-background');
+        changeImage('center-pictogram', 'settings-hover')"
+          onmouseout="restoreColors('center-background');
+        changeImage('center-pictogram', 'settings-1553')"
+        >
+          <div class="settings-1553" id="center-pictogram"></div>
+        </div>
+        <h2 class="group-title">Easy Customize</h2>
+        <p class="group-description">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi enim
+          ex iusto perferendis?
+        </p>
+      </section>
+      <!--Right group-->
+      <section class="group">
+        <div
+          class="pictogram-background"
+          id="right-background"
+          onmouseover="changeColors('right-background');
+        changeImage('right-pictogram', 'dashboard-hover')"
+          onmouseout="restoreColors('right-background');
+        changeImage('right-pictogram', 'dashboard-1546')"
+        >
+          <div class="dashboard-1546" id="right-pictogram"></div>
+        </div>
+        <h2 class="group-title">Fast and reliable</h2>
+        <p class="group-description">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi enim
+          ex iusto perferendis?
+        </p>
+      </section>
+    </main>
+    <script>
+      function changeColors(backGndId) {
+        document.getElementById(backGndId).classList.add("change-background");
+      }
+      function restoreColors(backGndId) {
+        document
+          .getElementById(backGndId)
+          .classList.remove("change-background");
+      }
+      function changeImage(imgId, appliedClass) {
+        document.getElementById(imgId).className = appliedClass;
+      }
+    </script>
+  </body>
+</html>
